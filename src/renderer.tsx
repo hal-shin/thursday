@@ -26,6 +26,16 @@
  * ```
  */
 
-import './index.css';
+import { App } from "./App";
+import "./index.css";
+import * as ReactDOM from "react-dom";
+import * as React from "react";
 
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
+// myTitleBar.updateTitle("Friday - Your Personal Assistant");
+
+ReactDOM.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>,
+  document.getElementById("root")
+);
