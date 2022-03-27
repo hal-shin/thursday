@@ -1,3 +1,4 @@
+import { APP_BASE_ROUTE } from "@/config";
 import { theme } from "@/config/theme";
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
@@ -10,8 +11,10 @@ interface Props {
 
 export const AppProviders = ({ children }: Props) => {
   return (
-    <ChakraProvider theme={theme}>
-      <Router>{children}</Router>
-    </ChakraProvider>
+    <React.Suspense fallback={<div>Loading...</div>}>
+      <ChakraProvider theme={theme}>
+        <Router basename={APP_BASE_ROUTE}>{children}</Router>
+      </ChakraProvider>
+    </React.Suspense>
   );
 };

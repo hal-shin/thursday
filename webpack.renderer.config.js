@@ -10,6 +10,7 @@ rules.push({
 });
 
 module.exports = {
+  output: { chunkFilename: "main_window/[name].chunk.js", publicPath: "../" },
   module: {
     rules,
   },

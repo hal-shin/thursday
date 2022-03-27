@@ -12,7 +12,8 @@
     "lint": "eslint --ext .ts,.tsx .",
     "prepare": "husky install",
     "storybook": "start-storybook -p 6006 -s public",
-    "test": "jest"
+    "test": "jest",
+    "generate": "plop"
   },
   "keywords": [],
   "author": {

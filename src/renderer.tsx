@@ -33,6 +33,10 @@ import * as React from "react";
 
 // myTitleBar.updateTitle("Friday - Your Personal Assistant");
 
+console.log(
+  '👋 This message is being logged by "renderer.js", included via webpack'
+);
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
