@@ -18,5 +18,13 @@
     "import/resolver": {
       "typescript": {}
     }
+  },
+  "rules": {
+    "no-restricted-imports": [
+      "error",
+      {
+        "patterns": ["@/features/*/*"]
+      }
+    ]
   }
 }

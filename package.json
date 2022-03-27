@@ -9,7 +9,8 @@
     "package": "electron-forge package",
     "make": "electron-forge make",
     "publish": "electron-forge publish",
-    "lint": "eslint --ext .ts,.tsx ."
+    "lint": "eslint --ext .ts,.tsx .",
+    "prepare": "husky install"
   },
   "keywords": [],
   "author": {
@@ -82,7 +83,9 @@
     "eslint": "^8.0.1",
     "eslint-plugin-import": "^2.25.0",
     "fork-ts-checker-webpack-plugin": "^6.0.1",
+    "husky": "^7.0.0",
     "node-loader": "^2.0.0",
+    "prettier": "^2.6.1",
     "style-loader": "^3.0.0",
     "ts-loader": "^9.2.2",
     "typescript": "~4.5.4"
@@ -93,5 +96,10 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^6.2.2"
+  },
+  "lint-staged": {
+    "*.+(ts|tsx)": [
+      "yarn lint"
+    ]
   }
 }

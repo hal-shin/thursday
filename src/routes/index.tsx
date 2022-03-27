@@ -1,7 +1,5 @@
 import React from "react";
 
-interface Props {}
-
-export const AppRoutes = ({}: Props) => {
+export const AppRoutes = () => {
   return <div></div>;
 };
