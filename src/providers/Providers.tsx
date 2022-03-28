@@ -12,7 +12,7 @@ interface Props {
 export const AppProviders = ({ children }: Props) => {
   return (
     <React.Suspense fallback={<div>Loading...</div>}>
-      <ChakraProvider theme={theme}>
+      <ChakraProvider theme={theme} resetCSS={true}>
         <Router basename={APP_BASE_ROUTE}>{children}</Router>
       </ChakraProvider>
     </React.Suspense>
